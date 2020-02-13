@@ -18,20 +18,23 @@ class App extends Component {
     onSelect = classColor => {
         let { selected, item } = this.state;
 
+        selected = selected.filter(el => el.item !== item);
         selected.push({ item, classColor });
 
         this.setState({ selected, item: null, showTeeths: true });
     }
 
+    close = () => this.setState({ item: null, showTeeths: true });
+
     render() {
-        const { selected, showTeeths } = this.state;
+        const { selected, showTeeths, item } = this.state;
 
         return (
             <div className="container-center">
                 {(showTeeths) ? (
                     <Teeths onPress={ this.onPress } selected={ selected }/>
                 ) : (
-                    <Select onSelect={ this.onSelect }/>
+                    <Select onSelect={ this.onSelect } close={ this.close } item={ item }/>
                 )}
             </div>
         );

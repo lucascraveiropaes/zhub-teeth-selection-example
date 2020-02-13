@@ -24,7 +24,13 @@ class App extends Component {
         this.setState({ selected, item: null, showTeeths: true });
     }
 
-    close = () => this.setState({ item: null, showTeeths: true });
+    close = item => {
+        let { selected } = this.state;
+
+        selected = selected.filter(el => el.item !== item);
+
+        this.setState({ selected, item: null, showTeeths: true });
+    }
 
     render() {
         const { selected, showTeeths, item } = this.state;

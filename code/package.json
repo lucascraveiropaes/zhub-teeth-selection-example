@@ -1,5 +1,6 @@
 {
     "name": "zhub-teeth-selection-example",
+    "homepage": "https://lucascraveiropaes.github.io/zhub-teeth-selection-example/",
     "version": "0.0.1",
     "private": true,
     "dependencies": {
@@ -9,8 +10,8 @@
         "react-scripts": "^3.3.1"
     },
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
+        "start": "cls && react-scripts start",
+        "build": "cls && react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },

@@ -8,7 +8,7 @@ class Select extends Component {
             <div className="container-center select">
                 <div className="row">
                     <span>Dente { item }</span>
-                    <button onClick={ close }>x</button>
+                    <button onClick={ () => close(item) }>x</button>
                 </div>
                 <button className="blue" onClick={ () => onSelect("blue") }>Manter</button>
                 <button className="orange" onClick={ () => onSelect("orange") }>Fechar</button>
